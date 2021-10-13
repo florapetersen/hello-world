@@ -14,10 +14,13 @@ const port = process.env.PORT || "8000";
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 /**
+The views setting tells Express what directory it should use as the source of view template files. 
+In this case, you set the views directory as the source using the path.join() method, which creates a cross-platform file path.
+The view engine setting tells Express what template engine to use, which in this case, is pug.
  * Routes Definitions
  */
 app.get("/", (req, res) => {
-    res.status(200).send("Your server is up and running!");
+    res.render("index", { title: "Home" });
 });
 /**
  * Server Activation
