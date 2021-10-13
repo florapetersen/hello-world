@@ -23,6 +23,13 @@ app.get("/", (req, res) => {
     res.render("index", { title: "Home" });
 });
 /**
+The first argument of res.render() is a string that represents the file path of a template, within the templates source directory, views.
+It renders the file and then sends the rendered HTML to the client (as a string). 
+The extension for the template file defaults to .pug because Pug is the default view engine. 
+
+The second argument is optional. This represents an object that the controller passes to the template. 
+The properties of this object become local variables in the template. So { title: "Home" } defines a local variable called title,
+in index.pug. Index.pug doesn't actually use "title" locally. It is used by the template that index.pug extends (layout.pug)
  * Server Activation
  */
 app.listen(port, () => {
