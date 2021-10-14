@@ -141,6 +141,12 @@ a {
   box-shadow: var(--ui-shadow);
 }
 
+.UserView {
+  background: url("https://cdn.auth0.com/blog/whatabyte-portal/patio.jpeg") left
+    bottom;
+  background-size: cover;
+}
+
 .WelcomeView {
     background: url("palm-leaves.jpg") left bottom;
     background-size: cover;
