@@ -20,11 +20,14 @@ In this case, you set the views directory as the source using the path.join() me
 The view engine setting tells Express what template engine to use, which in this case, is pug.
  * Routes Definitions
  */
-app.get("/", (req, res) => { ... });
+app.get("/", (req, res) => {
+    res.render("index", { title: "Home" })
+});
 
 app.get("/user", (req, res) => {
     res.render("user", { title: "Profile", userProfile: { nickname: "Auth0" } });
 });
+
 /**
 The first argument of res.render() is a string that represents the file path of a template, within the templates source directory, views.
 It renders the file and then sends the rendered HTML to the client (as a string). 
